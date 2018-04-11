@@ -4,10 +4,5 @@ html
     body
         h1= name
         div.form.
-        form
-            | Podaj swoje imię: 
-            input(user='Imię')
-            br
-            | Podaj swój Email: 
-            input(email='Email')
-        a(href= url) Zaloguj się
+        form(action='http://localhost:3000/auth/google', method='GET')
+            input(type='submit', value='Zaloguj przez Google')
